@@ -1,2 +1,2 @@
-My_defender est un projet CSFML basé sur le model "Tower defence".
+My_defender est un projet CSFML basé sur le model "Tower defense".
 
