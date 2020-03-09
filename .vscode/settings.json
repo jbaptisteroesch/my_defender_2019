@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "resolution_hd.C": "cpp",
+        "array": "c",
+        "chrono": "c",
+        "functional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "variant": "c",
+        "condition_variable": "c"
+    }
+}

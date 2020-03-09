@@ -1,0 +1,6 @@
+JB -> 440
+FLORIANLEP -> 350
+SALUT -> 200
+DRE -> 50
+FDP -> 50
+DRE -> 0
