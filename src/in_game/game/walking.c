@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Change la position des ennemy (parcours de la map).
-
 int change_ennemy_position(game_t *game)
 {
     static float i;
@@ -29,9 +26,6 @@ int change_ennemy_position(game_t *game)
     return (1);
 }
 
-
-// ? Fait bouger les ennemy et les flèches.
-
 int moove_ennemy_and_arrows(game_t *game)
 {
     change_ennemy_rect(game);
@@ -41,9 +35,6 @@ int moove_ennemy_and_arrows(game_t *game)
     move_every_arrows(game);
     return (1);
 }
-
-
-// ? Fait avancer les ennemy.
 
 int walk_ennemy(game_t *game)
 {

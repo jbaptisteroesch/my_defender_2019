@@ -7,8 +7,6 @@
 
 #include "../include/my.h"
 
-// ? Création de texte dans le menu settings.
-
 int create_text_settings_menu(game_t *game, char *string,
                                             sfVector2f position, int pos_tab)
 {

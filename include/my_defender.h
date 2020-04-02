@@ -22,6 +22,7 @@ int in_game(game_t *game);
 int pause_menu(game_t *game);
 int end_menu(game_t *game);
 int init_game_state_tab(game_t *game);
+int create_music(game_t *game);
 create_button_t create_button(create_button_t button, char *button_name,
                                                     float pos_x, float pos_y);
 elem_t create_element(elem_t element, char *element_name,
@@ -212,7 +213,7 @@ int set_sprite_positiontwo(game_t *game, sfVector2f vector,
 sfVector2f actual_position);
 int set_sprite_position_settings_two(game_t *game,
 sfVector2f vector, sfVector2f actual_position);
-int events_end_menu(game_t *game);
+int events_end_menu(game_t *game, char *name);
 void draw_end_menu(game_t *game);
 void destroy_end_menu(game_t *game);
 int end_menu(game_t *game);
@@ -231,7 +232,7 @@ int read_highscore_file(game_t *game, char *buffer, int fd);
 int read_file_score(game_t *game);
 int place_in_file(game_t *game, char *name);
 int set_to_string(game_t *game, char *name);
-int analyse_username(game_t *game);
+int analyse_username(game_t *game, char *name);
 void draw_tuto(game_t *game);
 void events_tuto(game_t *game);
 int ui_pause_menu(game_t *game);
@@ -240,5 +241,8 @@ int is_everything_draw(game_t *game);
 int scale_tuto(game_t *game);
 int resize_leaderboard_two(game_t *game);
 int alloc_path(game_t *game, float *tab);
+void draw_tree(game_t *game);
+void draw_false_threed(game_t *game);
+void usage(void);
 
 #endif /* !MY_DEFENDER_H_ */

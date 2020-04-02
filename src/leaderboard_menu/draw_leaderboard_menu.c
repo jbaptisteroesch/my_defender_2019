@@ -8,9 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-// ? Dessine le leaderboard menu.
-
 void draw_leaderboard_menu(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window, game->window->sprite, NULL);

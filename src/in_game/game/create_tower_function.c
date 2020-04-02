@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Fonction générique de création de tours. part 2
-
 sfVector2f create_towers_generic_function_next(game_t *game,
                                                         create_tower_t tower)
 {
@@ -19,8 +16,6 @@ sfVector2f create_towers_generic_function_next(game_t *game,
     }
     return (tower.set_position);
 }
-
-// ? Fonction générique de création de tours.
 
 create_tower_t create_towers_generic_function(game_t *game, int rect)
 {

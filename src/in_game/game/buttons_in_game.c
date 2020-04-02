@@ -8,10 +8,6 @@
 #include "../include/my.h"
 #include "../include/in_game_state.h"
 
-
-
-// ? Crée le tableau des bouttons dans l'état de jeu : IN GAME.
-
 int create_in_game_button_tab(game_t *game, int buttons_ig)
 {
     if (!(game->button.state_in_game = malloc(sizeof(int) * buttons_ig)))
@@ -20,9 +16,6 @@ int create_in_game_button_tab(game_t *game, int buttons_ig)
         game->button.state_in_game[z] = 0;
     return (1);
 }
-
-
-// ? Crée les boutons du shop quans survolé.
 
 int create_shop_button_hover(game_t *game)
 {
@@ -41,9 +34,6 @@ int create_shop_button_hover(game_t *game)
             1730 * s.x, 180 * s.y);
     return (1);
 }
-
-
-// ? Crée les boutons d'upgrade des tours.
 
 int create_upgrade_button(game_t *game, sfVector2f s)
 {
@@ -65,9 +55,6 @@ int create_upgrade_button(game_t *game, sfVector2f s)
     return (1);
 }
 
-
-// ? Crée les boutons du shop.
-
 int create_shop_button(game_t *game)
 {
     sfVector2f s = game->window->scale;
@@ -88,12 +75,6 @@ int create_shop_button(game_t *game)
     create_shop_button_hover(game);
     return (1);
 }
-
-
-// ? Création des boutons dans l'état de jeu : IN GAME.
-// ? DOUZE boutons : PAUSE, PAUSE HOVER, SHOP, SHOP HOVER
-// ? ACHAT BLUE TOWER, ACHAT YELLOW TOWER, ACHAT STRAW TOWER, ACHAT ROCK TOWER.
-// ? + HOVER pour chacuns.
 
 int in_game_button(game_t *game)
 {

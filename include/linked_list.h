@@ -10,9 +10,6 @@
 
 #include "my.h"
 
-
-// ? Sturcture de création des ennemy.
-
 typedef struct create_ennemy_s
 {
     sfTexture *texture;
@@ -28,17 +25,11 @@ typedef struct create_ennemy_s
     int gave_money;
 } create_ennemy_t;
 
-
-// ? Structure d'ajout d'ennemy dans la wave.
-
 typedef struct add_ennemy_s
 {
     create_ennemy_t ennemy;
     struct add_ennemy_s *next;
 } add_ennemy_t;
-
-
-// ? Structure de création de tour.
 
 typedef struct create_tower_s
 {
@@ -52,9 +43,6 @@ typedef struct create_tower_s
     int tower_position;
     int damage;
 } create_tower_t;
-
-
-// ? Structure d'ajout de tour sur la map.
 
 typedef struct add_tower_s
 {

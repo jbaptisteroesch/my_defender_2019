@@ -25,6 +25,7 @@ int read_highscore_file(game_t *game, char *buffer, int fd)
     }
     game->end_game.read_highscore[k] = NULL;
     close (fd);
+    free(buffer);
     analyse_high_score_file(game);
     return (1);
 }
@@ -69,36 +70,39 @@ int place_in_file(game_t *game, char *name)
 
 int set_to_string(game_t *game, char *name)
 {
-    static int i;
-    static int letters;
-
-    if (letters == 10)
+    if (game->window->event.key.code == 59) {
+        if (game->end_game.i == 0)
+            return (1);
+        game->end_game.i--;
+        game->end_game.letters--;
+        name[game->end_game.i] = '\0';
+        sfText_setString(game->game_text.end_menu[1].string, name);
         return (1);
-    name[i] = game->window->event.key.code + 65;
-    ++i;
-    ++letters;
-    name[i] = '\0';
+    }
+    if (game->end_game.letters == 10)
+        return (1);
+    name[game->end_game.i] = game->window->event.key.code + 65;
+    ++game->end_game.i;
+    ++game->end_game.letters;
+    name[game->end_game.i] = '\0';
     sfText_setString(game->game_text.end_menu[1].string, name);
     return (1);
 }
 
-int analyse_username(game_t *game)
+int analyse_username(game_t *game, char *name)
 {
-    static char *name = NULL;
-
-    if (name == NULL) {
-        if (!(name = malloc(sizeof(char) * 11)))
-            return (0);
-    }
     if (game->window->event.type == sfEvtKeyPressed) {
         if (game->window->event.key.code == sfKeyEnter) {
             place_in_file(game, name);
             free (name);
+            game->end_game.i = 0;
+            game->end_game.letters = 0;
             game->end_game.press_enter = true;
             return (1);
         }
-        if (game->window->event.key.code >= 0 &&
-                                        game->window->event.key.code <= 25)
+        if ((game->window->event.key.code >= 0 &&
+                                    game->window->event.key.code <= 25) ||
+                                        game->window->event.key.code == 59)
             set_to_string(game, name);
         else
             return (1);

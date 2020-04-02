@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Draw straw et rock towers.
-
 void draw_st_and_rt_towers(game_t *game)
 {
     if (game->button.state_in_game[IG_ST_BUT] == 1)
@@ -26,9 +23,6 @@ void draw_st_and_rt_towers(game_t *game)
                         game->button.in_game[IG_RT_BUT].sprite, NULL);
     return;
 }
-
-
-// ? Draw blue et yellow towers.
 
 void draw_bt_and_yt_towers(game_t *game)
 {

@@ -11,6 +11,7 @@ int add_node_arrow(game_t *game, arrow_info_t info)
 {
     add_arrow_t *node = NULL;
 
+    sfSound_play(game->sounds[0]);
     if (!(node = malloc(sizeof(add_arrow_t))))
         return (change_state_cause_of_error(game));
     game->head_arrow = create_node_arrow(game, node, info);

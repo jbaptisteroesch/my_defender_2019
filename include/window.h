@@ -10,8 +10,6 @@
 
 #include "my.h"
 
-// ? Structure générique de création de window.
-
 typedef struct s_window
 {
     sfVector2f scale;

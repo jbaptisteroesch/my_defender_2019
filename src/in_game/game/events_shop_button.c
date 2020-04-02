@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Close shop in game.
-
 int close_shop_ig(game_t *game)
 {
     if (game->button.in_game[IG_SHOP_BUT].is_click &&
@@ -22,9 +19,6 @@ int close_shop_ig(game_t *game)
     }
     return (1);
 }
-
-
-// ? Ouvre ou ferme le shop.
 
 int open_or_close_shop(game_t *game)
 {
@@ -47,9 +41,6 @@ int open_or_close_shop(game_t *game)
     close_shop_ig(game);
     return (1);
 }
-
-
-// ? Check_si la souris est sur le bouton du shop.
 
 int is_on_shop_button(game_t *game)
 {

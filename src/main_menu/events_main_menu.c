@@ -7,10 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Check de la position de la souris dans le menu principal
-// ? pour l'animation des boutons
-
 int check_mouse_position_main_menu(game_t *game)
 {
     for (int pos = 0; pos < 4; ++pos) {
@@ -33,9 +29,6 @@ int check_mouse_position_main_menu(game_t *game)
     }
     return (1);
 }
-
-
-// ? Gestion des évenements dans le menu principal
 
 void events_main_menu(game_t *game)
 {

@@ -8,9 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-// ? Check la position de la souris sur la résolution DVD.
-
 int check_mouse_pos_dvd_res(game_t *game)
 {
     sfFloatRect rect_rect;
@@ -27,9 +24,6 @@ int check_mouse_pos_dvd_res(game_t *game)
     }
     return (1);
 }
-
-
-// ? Check la position de la souris sur la résolution HD READY.
 
 int check_mouse_pos_hd_ready_res(game_t *game)
 {
@@ -48,9 +42,6 @@ int check_mouse_pos_hd_ready_res(game_t *game)
     return (1);
 }
 
-
-// ? Check la position de la souris sur la résolution HD.
-
 int check_mouse_pos_hd_res(game_t *game)
 {
     sfFloatRect rect_rect;
@@ -68,9 +59,6 @@ int check_mouse_pos_hd_res(game_t *game)
     return (1);
 }
 
-
-// ? Check de la position de la souris pour le bouton.
-
 int check_mouse_position_settings_menu(game_t *game)
 {
     check_mouse_pos_close_button_settings_menu(game);
@@ -80,9 +68,6 @@ int check_mouse_position_settings_menu(game_t *game)
     check_mouse_pos_hd_res(game);
     return (1);
 }
-
-
-// ? Events de l'interface des options.
 
 int events_settings_menu(game_t *game)
 {

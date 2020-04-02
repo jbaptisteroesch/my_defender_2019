@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? check si le joueur a assez de money lors de l'upgrade d'une tour.
-
 int condition_money_is_enough_for_upgrade(game_t *game, int is_enough)
 {
     char *money = NULL;
@@ -23,9 +20,6 @@ int condition_money_is_enough_for_upgrade(game_t *game, int is_enough)
     } else
         return (0);
 }
-
-
-// ? Check si le joueur a assez de money pour upgrade la tour.
 
 int check_money_when_upgrade(game_t *game, add_tower_t *current)
 {
@@ -50,8 +44,6 @@ int check_money_when_upgrade(game_t *game, add_tower_t *current)
         return (0);
     return (1);
 }
-
-// ? Check la monnaie pour l'upgrade et set le texte.
 
 int check_money_for_upgrade(game_t *game, add_tower_t *current)
 {

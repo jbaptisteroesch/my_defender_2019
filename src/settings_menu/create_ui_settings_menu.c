@@ -8,10 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-
-// ? Remplit le tableau du settings menu pour les boutons de résolution.
-
 int fill_tab_res_button(game_t *game)
 {
     game->button.settings_menu_tab[0][X] = 612.0;
@@ -22,9 +18,6 @@ int fill_tab_res_button(game_t *game)
     game->button.settings_menu_tab[2][Y] = 680.0;
     return (1);
 }
-
-
-// ? Create rectangle shape for resolution text.
 
 int create_rectangle_sm_text(game_t *game, sfVector2f position, int i, int size)
 {
@@ -41,9 +34,6 @@ int create_rectangle_sm_text(game_t *game, sfVector2f position, int i, int size)
     return (1);
 }
 
-
-// ? Création du etxte du settings menu suite.
-
 int set_text_settings_menu_next(game_t *game, sfVector2f position, int size)
 {
     position.x = 730;
@@ -59,7 +49,6 @@ int set_text_settings_menu_next(game_t *game, sfVector2f position, int size)
     create_text_settings_menu(game, "720 * 480", position, SM_RES_DVD);
     return (1);
 }
-// ? Création du texte du settinsg menu.
 
 int set_text_settings_menu(game_t *game)
 {
@@ -80,9 +69,6 @@ int set_text_settings_menu(game_t *game)
     fill_tab_res_button(game);
     return (1);
 }
-
-
-// ? Création table des options et du texte des résolutions.
 
 int create_ui_settings_menu(game_t *game)
 {

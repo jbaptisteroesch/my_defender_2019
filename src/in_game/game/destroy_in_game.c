@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Détruit les éléments de tour IN GAME.
-
 void destroy_tower_in_game(game_t *game)
 {
     add_tower_t *current = game->head_tower;
@@ -24,9 +21,6 @@ void destroy_tower_in_game(game_t *game)
     return;
 }
 
-
-// ? Détruit les boutons dans l'état IN GAME.
-
 void destroy_in_game_button(game_t *game)
 {
     for (int i = 0; i < 17; ++i) {
@@ -35,9 +29,6 @@ void destroy_in_game_button(game_t *game)
     }
     return;
 }
-
-
-// ? Détruit l'UI IN GAME.
 
 void destroy_ui_in_game(game_t *game)
 {
@@ -52,9 +43,6 @@ void destroy_ui_in_game(game_t *game)
     return;
 }
 
-
-// ? Détruit les ennemy en jeu.
-
 void destroy_ennemy_in_game(game_t *game)
 {
     add_ennemy_t *current = game->head_ennemy;
@@ -67,11 +55,12 @@ void destroy_ennemy_in_game(game_t *game)
     return;
 }
 
-
-// ? Détruit les éléments de l'état de jeu : IN GAME.
-
 void destroy_in_game(game_t *game)
 {
+    for (int i = 0; i < 2; i++) {
+        sfSound_destroy(game->sounds[i]);
+        sfSoundBuffer_destroy(game->sbuffer[i]);
+    }
     destroy_in_game_button(game);
     destroy_tower_in_game(game);
     destroy_ennemy_in_game(game);

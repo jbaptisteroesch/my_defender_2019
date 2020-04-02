@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Dessine le texte des données joueur.
-
 void draw_text_player_data(game_t *game)
 {
     sfRenderWindow_drawText(game->window->window,
@@ -24,11 +21,12 @@ void draw_text_player_data(game_t *game)
                     game->game_text.in_game[PLAYER_MONEY_TEXT].string, NULL);
     sfRenderWindow_drawText(game->window->window,
                     game->game_text.in_game[PLAYER_MONEY_NUMBER].string, NULL);
+    sfRenderWindow_drawText(game->window->window,
+                    game->game_text.in_game[PLAYER_WAVE_TEXT].string, NULL);
+    sfRenderWindow_drawText(game->window->window,
+                    game->game_text.in_game[PLAYER_WAVE_NUMB].string, NULL);
     return;
 }
-
-
-// ? Draw upgrade sprite 2.
 
 void draw_upgrade_sprite_st_rt(game_t *game)
 {
@@ -55,8 +53,6 @@ void draw_upgrade_sprite_st_rt(game_t *game)
     return;
 }
 
-// ? draw les sprites d'update des tours.
-
 void draw_upgrade_sprite(game_t *game)
 {
     if (game->shop.tower_to_upgrade == 1) {
@@ -82,9 +78,6 @@ void draw_upgrade_sprite(game_t *game)
     return;
 }
 
-
-// ? Dessine les élements de l'état : IN GAME.
-
 void draw_in_game(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window, game->window->sprite, NULL);
@@ -98,7 +91,9 @@ void draw_in_game(game_t *game)
         draw_warning_wave(game);
     if (game->player_data.next_wave_in == -1)
         draw_ennemy_wave(game);
+    draw_false_threed(game);
     draw_sprite_shot(game);
+    draw_tree(game);
     if (game->player_data.tower_is_click) {
         draw_upgrade_sprite(game);
         draw_upgrade_sprite_st_rt(game);

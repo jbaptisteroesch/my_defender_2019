@@ -16,9 +16,6 @@
 #include "in_game_state.h"
 #include "linked_list.h"
 
-
-// ? enum pour  les différents ETATS_DE_JEU
-
 enum game_state {
     MAIN_MENU,
     PREGAME,
@@ -30,15 +27,9 @@ enum game_state {
     END_MENU,
 };
 
-
-// ? #define UI main menu
-
 enum ui_mm {
     BACK
 };
-
-
-// ? Enum des clock pour le in game state.
 
 enum clock_ig {
     CLOCK_SHOP,
@@ -46,9 +37,6 @@ enum clock_ig {
     CLOCK_WALK_ENNEMY,
     CLOCK_POS_ENNEMY
 };
-
-
-// ? Struct pour catch les textes comme des boutons.
 
 typedef struct rectangle_s
 {
@@ -58,9 +46,6 @@ typedef struct rectangle_s
     sfColor color;
     bool is_hover;
 } rectangle_t;
-
-
-// ? Structure de check d'état de jeu.
 
 typedef struct game_state_s
 {
@@ -79,9 +64,6 @@ typedef struct game_state_s
     bool game_is_up;
 } game_state_t;
 
-
-// ? Structure des textes.
-
 typedef struct text_s
 {
     string_t *score;
@@ -92,10 +74,6 @@ typedef struct text_s
     string_t *end_menu;
 } text_t;
 
-
-
-// ? Struct de création de clock.
-
 typedef struct clocks_s
 {
     sfClock *clock;
@@ -103,16 +81,10 @@ typedef struct clocks_s
     float seconds;
 } clocks_t;
 
-
-// ? Struct listage clock.
-
 typedef struct clock_list_s
 {
     clocks_t *in_game;
 } clock_list_t;
-
-
-// ? Struct de création d'entité de jeu.
 
 typedef struct entity_s
 {
@@ -120,18 +92,12 @@ typedef struct entity_s
     sfColor color_towers;
 } entity_t;
 
-
-// ? Sturcture regroupant les condition dans le tuto.
-
 typedef struct tuto_s
 {
     bool is_in_tuto;
     bool quit_tuto;
     int tuto_page;
 } tuto_t;
-
-
-// ? Stucture contenant les conditions du shop.
 
 typedef struct shop_s
 {
@@ -144,37 +110,32 @@ typedef struct shop_s
 } shop_t;
 
 
-// ? Struture du menu de fin de jeu
-
 typedef struct end_game_s
 {
     bool press_enter;
     bool find_place;
+    int i;
+    int letters;
     char *username;
     char **read_highscore;
     int lign_to_write;
 } end_game_t;
-
-
-// ? Structure pour les stats des ennemy
 
 typedef struct ennemy_info_s
 {
     int ennemy_life;
 } ennemy_info_t;
 
-// ? Structure de cheat code.
-
 typedef struct cheat_s
 {
     bool money;
 } cheat_t;
 
-
-// ? Structure principal de jeu.
-
 typedef struct game_s
 {
+    sfSoundBuffer **sbuffer;
+    sfSound **sounds;
+    sfMusic *music;
     window_t *window;
     game_state_t menu;
     button_list_t button;

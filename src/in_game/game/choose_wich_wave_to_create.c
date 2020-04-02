@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Ajoute une node à la liste tower (qui ne soit pas la première).
-
 int create_node_ennemy(game_t *game, add_ennemy_t **head)
 {
     add_ennemy_t *node;
@@ -21,9 +18,6 @@ int create_node_ennemy(game_t *game, add_ennemy_t **head)
     *head = node;
     return (1);
 }
-
-
-// ? Crée la liste chainée ennemy wave une.
 
 int create_wave_one(game_t *game)
 {
@@ -53,13 +47,15 @@ int move_ennemy_at_start(game_t *game)
     return (1);
 }
 
-
-// ? Crée les ennemy, 3 ennemy différents.
-
 int create_ennemy(game_t *game)
 {
-    if (game->player_data.wave_number == 3)
+    char *string = NULL;
+
+    if (game->player_data.wave_number > 3)
         game->player_data.wave_number = 1;
+    game->player_data.wave_all_time += 1;
+    string = my_nbrtoarray(game->player_data.wave_all_time);
+    sfText_setString(game->game_text.in_game[PLAYER_WAVE_NUMB].string, string);
     game->ennemy.ennemy_life += 50;
     create_wave_one(game);
     return (1);

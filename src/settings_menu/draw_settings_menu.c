@@ -8,18 +8,12 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-// ? Dessine la bar de séléction de la résolution.
-
 int draw_selection_bar_resolution(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window,
                                 game->menu.ui_settings_menu[1].sprite, NULL);
     return (1);
 }
-
-
-// ? Dessine les boutons close et musique.
 
 int draw_close_and_music_button(game_t *game)
 {
@@ -37,9 +31,6 @@ int draw_close_and_music_button(game_t *game)
                             game->button.settings_menu[SM_SOUND].sprite, NULL);
     return (1);
 }
-
-
-// ? Dessine le menu des options.
 
 void draw_settings_menu(game_t *game)
 {

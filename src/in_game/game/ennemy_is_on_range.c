@@ -7,18 +7,12 @@
 
 #include "../include/my.h"
 
-
-// ? Event de check de la range pour le draw du sprite.
-
 int ennemy_is_on_range(game_t *game)
 {
     if (game->head_tower != NULL && game->head_ennemy != NULL)
         is_he_on_range(game);
     return (1);
 }
-
-
-// ? Boucle sur les tour et les ennemis pour savoir si il y en a dans la range.
 
 int is_he_on_range(game_t *game)
 {
@@ -42,9 +36,6 @@ int is_he_on_range(game_t *game)
     return (1);
 }
 
-
-// ? Check la range selon la distance d'une tour et d'un ennemi
-
 int check_range(add_ennemy_t *tmp_ennemy, add_tower_t *tmp_tower,
                                                         sfVector2f scale)
 {
@@ -63,9 +54,6 @@ int check_range(add_ennemy_t *tmp_ennemy, add_tower_t *tmp_tower,
     }
     return (0);
 }
-
-
-// ? Check si un ennemi est en dehors de la map
 
 int is_he_out_map(game_t *game)
 {

@@ -10,6 +10,8 @@ SRC		=		src/main.c			\
 				src/main_menu/main_menu.c		\
 				src/create_button.c	\
 				src/create_element.c	\
+				src/music.c	\
+				src/usage.c	\
 				src/main_menu/create_main_menu_buttons.c	\
 				src/main_menu/create_ui_main_menu.c	\
 				src/main_menu/events_main_menu.c		\
@@ -97,15 +99,14 @@ SRC		=		src/main.c			\
 				src/in_game/pregame/events_tuto.c	\
 				src/in_game/pause_menu/create_ui_pause_menu.c	\
 				src/in_game/pregame/draw_tuto.c	\
-				src/cheat.c	\
+				src/cheat.c
 
 NAME	=		my_defender
 
 OBJ		=		$(SRC:.c=.o)
 
 CFLAGS	=		-I./include	\
-				-Wall	\
-				-g
+				-Wall
 
 OFLAGS	=		-O2
 

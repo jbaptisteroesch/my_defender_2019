@@ -7,8 +7,14 @@
 
 #include "../include/my.h"
 
-
-// ? Dessine les boutons du shop.
+void draw_tree(game_t *game)
+{
+    sfRenderWindow_drawSprite(game->window->window,
+                        game->menu.ui_in_game[IG_TREE].sprite, NULL);
+    sfRenderWindow_drawSprite(game->window->window,
+                        game->menu.ui_in_game[IG_TREE_SEC].sprite, NULL);
+    return;
+}
 
 void draw_shop_buttons(game_t *game)
 {
@@ -24,9 +30,6 @@ void draw_shop_buttons(game_t *game)
     }
     return;
 }
-
-
-// ? draw la desciption des shop boutons.
 
 void draw_description(game_t *game)
 {
@@ -44,9 +47,6 @@ void draw_description(game_t *game)
             game->menu.ui_in_game[IG_RT_DESCRIPTION].sprite, NULL);
     return;
 }
-
-
-// ? Dessine les éléments du shop.
 
 void draw_shop_elements(game_t *game)
 {

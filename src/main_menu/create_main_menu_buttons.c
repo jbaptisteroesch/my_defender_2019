@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Fonction de création des boutons du menu pricncipal, comportement au clic.
-
 int create_main_menu_onclick_buttons(game_t *game)
 {
     game->button.main_menu[MM_PLAY_BUTTON_ONCLICK] =
@@ -26,9 +23,6 @@ int create_main_menu_onclick_buttons(game_t *game)
         "png/mainmenu_buttons/quit_click.png", 764.0, 716.5);
     return (1);
 }
-
-
-// ? Fonction de création des boutons du menu principal, comportement au survol.
 
 int create_main_menu_hovering_buttons(game_t *game)
 {
@@ -49,9 +43,6 @@ int create_main_menu_hovering_buttons(game_t *game)
     return (1);
 }
 
-
-// ? Fonction de création des boutons du menu principal.
-
 int create_main_menu_buttons(game_t *game)
 {
     game->button.main_menu[MM_PLAY_BUTTON] =
@@ -70,9 +61,6 @@ int create_main_menu_buttons(game_t *game)
         return (0);
     return (1);
 }
-
-
-// ? Initialisation du tableau d'état des boutons.
 
 int initiate_state_button_tab(game_t *game)
 {

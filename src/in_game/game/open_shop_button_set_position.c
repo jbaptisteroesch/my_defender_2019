@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Set position des boutons du shop après l'animation.
-
 int open_set_shop_buttons_pos_after_animation(game_t *game)
 {
 
@@ -23,9 +20,6 @@ int open_set_shop_buttons_pos_after_animation(game_t *game)
                                     game->button.in_game[IG_RT_BUT].position);
     return (1);
 }
-
-
-// ? Set la position des boutons quand survolé.
 
 int set_hover_buttons(game_t *game)
 {

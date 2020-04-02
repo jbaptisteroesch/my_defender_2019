@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Check si la souris est sur le bouton pause.
-
 int is_on_pause_button(game_t *game)
 {
     game->button.in_game[IG_PAUSE_BUT].button_rect =
@@ -29,9 +26,6 @@ int is_on_pause_button(game_t *game)
     return (1);
 }
 
-
-// ? Check si la souris est sur un bouton.
-
 int is_on_button_in_game(game_t *game)
 {
     is_on_pause_button(game);
@@ -46,9 +40,6 @@ int is_on_button_in_game(game_t *game)
     has_upgrade_tower(game);
     return (1);
 }
-
-
-// ? Evenements de l'état de jeu : IN GAME.
 
 int events_in_game(game_t *game)
 {

@@ -10,9 +10,6 @@
 #ifndef IN_GAME_STATE_H_
 #define IN_GAME_STATE_H_
 
-
-// ? Liste des boutons in game.
-
 enum ig_buttons {
     IG_PAUSE_BUT,
     IG_PAUSE_BUT_HOV,
@@ -33,9 +30,6 @@ enum ig_buttons {
     IG_UPGRADE_RT
 };
 
-
-// ? enum pour les boutons du tuto.
-
 enum tuto_butt {
     TUTO_QUIT,
     TUTO_PREV,
@@ -44,7 +38,6 @@ enum tuto_butt {
     TUTO_PREV_HOV,
     TUTO_NEXT_HOV
 };
-// ? Liste des textes in game.
 
 enum ig_text {
     PLAYER_LEVEL_TEXT,
@@ -54,11 +47,10 @@ enum ig_text {
     PLAYER_MONEY_TEXT,
     PLAYER_MONEY_NUMBER,
     WARNING_WAVE_TEXT,
-    WARNING_WAVE_NUMB
+    WARNING_WAVE_NUMB,
+    PLAYER_WAVE_TEXT,
+    PLAYER_WAVE_NUMB
 };
-
-
-// ? Liste des élements d'ui in game.
 
 enum ig_ui {
     IG_MAP_LEVEL_ONE,
@@ -66,11 +58,11 @@ enum ig_ui {
     IG_BT_DESCRIPTION,
     IG_YT_DESCRIPTION,
     IG_ST_DESCRIPTION,
-    IG_RT_DESCRIPTION
+    IG_RT_DESCRIPTION,
+    IG_TREE,
+    IG_TREE_SEC,
+    IG_BLACK_RECT
 };
-
-
-// ? Liste des tours in game.
 
 enum ig_towers {
     BLUE_TOWER,
@@ -79,17 +71,11 @@ enum ig_towers {
     ROCK_TOWER
 };
 
-
-// ? Liste des ennemy in game
-
 enum ig_ennemy {
     ENNEMY_ONE,
     ENNEMY_TWO,
     ENNEMY_THREE
 };
-
-
-// ? Structure des data du joueur.
 
 typedef struct player_s
 {
@@ -101,6 +87,7 @@ typedef struct player_s
     int *place_is_fill;
     int next_wave_in;
     int to_upgrade;
+    int wave_all_time;
     char *clock_wave;
     bool tower_is_click;
     bool holding_bt;

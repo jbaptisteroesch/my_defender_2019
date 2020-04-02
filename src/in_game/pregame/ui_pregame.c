@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? Remplit le tableau des coordonnées des petites fenetres.
-
 int fill_pregame_tab(game_t *game)
 {
     if (!(game->button.state_pregame = malloc(sizeof(int) * 3)))
@@ -19,9 +16,6 @@ int fill_pregame_tab(game_t *game)
     game->button.state_pregame[2] = 0;
     return (1);
 }
-
-
-// ? Crée le texte du pregame.
 
 int create_text_pregame(game_t *game)
 {
@@ -40,9 +34,6 @@ int create_text_pregame(game_t *game)
     return (1);
 }
 
-
-// ? Crée boutons pregame state.
-
 int create_button_pregame(game_t *game)
 {
     if (!(game->button.pregame = malloc(sizeof(create_button_t) * 4)))
@@ -57,9 +48,6 @@ int create_button_pregame(game_t *game)
                 "png/settingsbuttons/button_close_shadow.png", 1370.0, 193.0);
     return (1);
 }
-
-
-// ? Crée l'UI du pregame.
 
 int ui_pregame(game_t *game)
 {

@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Création de la fenêtre de jeu.
-
 window_t *create_window(window_t *window, char *title)
 {
     sfVideoMode mode = {1920, 1080, 32};

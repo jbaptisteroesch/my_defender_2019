@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Création des éléments d'ui du menu principal
-
 int create_ui_main_menu(game_t *game)
 {
     if (!(game->menu.ui_main_menu = malloc(sizeof(elem_t))))

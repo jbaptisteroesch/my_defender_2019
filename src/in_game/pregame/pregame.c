@@ -7,8 +7,6 @@
 
 #include "../../../include/my.h"
 
-// ? Fonction principale du menu pregame.
-
 int pregame(game_t *game)
 {
     if (!(ui_pregame(game)))

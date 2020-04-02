@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Check le state de chacun des ennemy dans le début de map.
-
 sfVector2f change_state_begin_map(game_t *game, add_ennemy_t *ennemy)
 {
     int i = ennemy->ennemy.state;
@@ -32,9 +29,6 @@ sfVector2f change_state_begin_map(game_t *game, add_ennemy_t *ennemy)
     }
     return (ennemy->ennemy.set_position);
 }
-
-
-// ? Fait avancer les ennemy.
 
 int walk_through_map(game_t *game)
 {

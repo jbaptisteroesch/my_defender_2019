@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? Crée les boutons du tuto.
-
 int create_button_tuto(game_t *game, sfVector2f s)
 {
     game->button.tuto[TUTO_QUIT] = create_button (
@@ -33,9 +30,6 @@ int create_button_tuto(game_t *game, sfVector2f s)
         "png/settingsbuttons/button_right_hov.png", 1692 * s.x, 468.5 * s.y);
     return (1);
 }
-
-
-// ? UI tuto.
 
 int ui_tuto(game_t *game)
 {
@@ -88,8 +82,6 @@ void destroy_tuto(game_t *game)
     }
     return;
 }
-
-// ? Fonction de gestion du tuto.
 
 int player_is_in_tuto(game_t *game)
 {

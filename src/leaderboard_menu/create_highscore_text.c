@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Fonction de création de string du Highscore.
-
 int create_text_highscore(game_t *game, char *str)
 {
     sfText_setString(game->game_text.score[HS_SEVEN].string, str);

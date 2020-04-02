@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Upgrade le sprite de la tour.
-
 int do_upgrade_tower(game_t *game)
 {
     add_tower_t *current = game->head_tower;
@@ -30,9 +27,6 @@ int do_upgrade_tower(game_t *game)
     return (1);
 }
 
-
-// ? Hide sprite upgrade tower.
-
 int hide_sprite_upgrade(game_t *game, int i)
 {
     sfFloatRect rect_rect;
@@ -48,9 +42,6 @@ int hide_sprite_upgrade(game_t *game, int i)
     }
     return (1);
 }
-
-
-// ? Fonction qui gère l'uprade des tours.
 
 int display_sprite_upgrade(game_t *game, int i)
 {
@@ -68,13 +59,12 @@ int display_sprite_upgrade(game_t *game, int i)
                                             game->player_data.to_upgrade)
         current = current->next;
     game->shop.tower_to_upgrade = current->tower.type_for_upgrade;
+    if (current->tower.level == 3)
+        game->player_data.tower_is_click = 0;
     game->shop.pos_tower_to_upgrade.x = current->tower.set_position.x;
     game->shop.pos_tower_to_upgrade.y = current->tower.set_position.y;
     return (1);
 }
-
-
-// ? Exit display sprite.
 
 int display_or_not_sprite_upgrade(game_t *game, int i)
 {

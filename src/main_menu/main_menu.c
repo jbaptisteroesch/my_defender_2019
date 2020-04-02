@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Boucle de l'état de jeu : MENU PRINCIPAL.
-
 int main_menu(game_t *game)
 {
     if (!(game->button.main_menu = malloc(sizeof(create_button_t) * 12)))

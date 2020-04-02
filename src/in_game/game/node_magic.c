@@ -57,6 +57,7 @@ create_arrow_t create_magic_generic_function_mini(game_t *game,
 {
     create_arrow_t arrow;
     sfVector2f scale = {0.8, 0.8};
+    sfSound_play(game->sounds[1]);
 
     if (info.type == 0)
         arrow.texture = sfTexture_createFromFile("png/ingame/24.png", NULL);

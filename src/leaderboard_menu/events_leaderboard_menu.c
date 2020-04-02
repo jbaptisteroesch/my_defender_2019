@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Check de la position de la souris pour le bouton.
-
 int check_mouse_position_leaderboard_menu(game_t *game)
 {
     game->button.leaderboard[0].button_rect =
@@ -29,9 +26,6 @@ int check_mouse_position_leaderboard_menu(game_t *game)
         game->button.state_leaderboard_menu = 0;
     return (1);
 }
-
-
-// ? Events de l'interface leaderboard.
 
 int events_leaderboard_menu(game_t *game)
 {

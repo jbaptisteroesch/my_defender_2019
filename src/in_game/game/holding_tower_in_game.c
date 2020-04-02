@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Check si le joueur hold une tour et qu'il clic.
-
 int check_tower_holding(game_t *game)
 {
     if ((game->player_data.holding_bt || game->player_data.holding_yt ||
@@ -23,9 +20,6 @@ int check_tower_holding(game_t *game)
     }
     return (1);
 }
-
-
-// ? Check_si la souris est sur le bouton du shop rock tower.
 
 int is_on_rt_button(game_t *game)
 {
@@ -50,9 +44,6 @@ int is_on_rt_button(game_t *game)
     return (1);
 }
 
-
-// ? Check_si la souris est sur le bouton du shop straw tower.
-
 int is_on_st_button(game_t *game)
 {
     game->button.in_game[IG_ST_BUT].button_rect =
@@ -75,9 +66,6 @@ int is_on_st_button(game_t *game)
     }
     return (1);
 }
-
-
-// ? Check_si la souris est sur le bouton du shop yellow tower.
 
 int is_on_yt_button(game_t *game)
 {
@@ -102,9 +90,6 @@ int is_on_yt_button(game_t *game)
     }
     return (1);
 }
-
-
-// ? Check_si la souris est sur le bouton du shop blue tower.
 
 int is_on_bt_button(game_t *game)
 {

@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Vitesse d'animation des différents boutons du shop.
-
 int close_speed_shop_buttons_animation(game_t *game)
 {
     game->button.in_game[IG_BT_BUT].position.y -=
@@ -27,9 +24,6 @@ int close_speed_shop_buttons_animation(game_t *game)
     return (1);
 }
 
-
-// ? Set position des boutons du shop après l'animation.
-
 int close_set_shop_buttons_pos_after_animation(game_t *game)
 {
     sfSprite_setPosition(game->button.in_game[IG_BT_BUT].sprite,
@@ -42,9 +36,6 @@ int close_set_shop_buttons_pos_after_animation(game_t *game)
                                     game->button.in_game[IG_RT_BUT].position);
     return (1);
 }
-
-
-// ? Condition d'arrêt de l'animation du shop.
 
 int close_stop_condition_shop_animation_st_rt(game_t *game)
 {
@@ -60,9 +51,6 @@ int close_stop_condition_shop_animation_st_rt(game_t *game)
                         game->button.in_game[IG_YT_BUT].sprite, NULL);
     return (1);
 }
-
-
-// ? Condition d'arrêt de l'animation du shop.
 
 int close_stop_condition_shop_animation(game_t *game)
 {
@@ -86,9 +74,6 @@ int close_stop_condition_shop_animation(game_t *game)
     }
     return (1);
 }
-
-
-// ? Crée l'animation de menu déroulant pour le shop.
 
 int close_animation_shop(game_t *game)
 {

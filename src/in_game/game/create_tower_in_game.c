@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? check si le joueur a assez de money.
-
 int condition_money_is_enough(game_t *game, int is_enough)
 {
     char *money = NULL;
@@ -23,9 +20,6 @@ int condition_money_is_enough(game_t *game, int is_enough)
     } else
         return (0);
 }
-
-
-// ? Check si le joueur a assez de money pour poser la tour.
 
 int check_money_when_posing(game_t *game)
 {
@@ -51,9 +45,6 @@ int check_money_when_posing(game_t *game)
     return (1);
 }
 
-
-// ? Add une towers si assez de money.
-
 int add_node_towers(game_t *game, int wich_rect)
 {
     add_tower_t *node = NULL;
@@ -69,9 +60,6 @@ int add_node_towers(game_t *game, int wich_rect)
     }
     return (1);
 }
-
-
-// ? Ajoute une node à la liste tower (qui ne soit pas la première).
 
 add_tower_t *create_node_tower(game_t *game, int wich_rect, add_tower_t *node)
 {

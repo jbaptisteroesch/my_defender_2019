@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Quitter le jeu avec le bouton quitter du menu principal.
-
 int quit_game(game_t *game)
 {
     game->menu.game_state[QUIT] = 0;

@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Vitesse d'animation des différents boutons du shop.
-
 int open_speed_shop_buttons_animation(game_t *game)
 {
     game->button.in_game[IG_BT_BUT].position.y +=
@@ -26,9 +23,6 @@ int open_speed_shop_buttons_animation(game_t *game)
                                                         game->window->scale.y;
     return (1);
 }
-
-
-// ? Split de la fonction open_stop_condition_shop_animation.
 
 int open_shop(game_t *game)
 {
@@ -52,9 +46,6 @@ int open_shop(game_t *game)
     return (1);
 }
 
-
-// ? Condition d'arrêt de l'animation du shop.
-
 int open_stop_condition_shop_animation(game_t *game)
 {
     if (game->button.in_game[IG_BT_BUT].position.y > 285 *
@@ -75,9 +66,6 @@ int open_stop_condition_shop_animation(game_t *game)
     open_shop(game);
     return (1);
 }
-
-
-// ? Crée l'animation de menu déroulant pour le shop.
 
 int open_animation_shop(game_t *game)
 {

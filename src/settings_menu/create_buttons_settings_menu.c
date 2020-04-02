@@ -8,9 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-// ? Création du bouton quitter dans le settings menu.
-
 int create_quit_button_settings_menu(game_t *game)
 {
     game->button.settings_menu[SM_CLOSE] =
@@ -27,9 +24,6 @@ int create_quit_button_settings_menu(game_t *game)
                 "png/settingsbuttons/off_button.png", 1040, 420);
     return (1);
 }
-
-
-// ? Création du bouton du menu : menu des options.
 
 int create_settings_menu_buttons(game_t *game)
 {

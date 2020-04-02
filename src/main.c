@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Tableau de pointeurs sur fonctions, séléction de l'état du jeu.
-
 int (*select_game_state[8])(game_t *game) = {
     main_menu,
     pregame,
@@ -20,9 +17,6 @@ int (*select_game_state[8])(game_t *game) = {
     pause_menu,
     end_menu,
 };
-
-
-// ? Check si le joueur n'a pas quitté et séléction de l'état de jeu.
 
 int launch_game(game_t *game)
 {
@@ -39,9 +33,6 @@ int launch_game(game_t *game)
     return (1);
 }
 
-
-// ? Malloc du tableau de state et remplissage.
-
 int init_game_state_tab(game_t *game)
 {
     int init_tab = 0;
@@ -57,11 +48,6 @@ int init_game_state_tab(game_t *game)
     return (1);
 }
 
-
-// ? Malloc de la struct window, et initialisation du tableau d'état de jeu,
-// ? création de la window initialisation de la struct de jeu
-// ? et lancement du jeu
-
 int disp_window(game_t *game)
 {
     if (!(game->window = malloc(sizeof(window_t))))
@@ -73,20 +59,23 @@ int disp_window(game_t *game)
     game->window->scale = scale;
     game->window = create_window(game->window, "my_defender");
     game->menu.game_is_up = true;
+    create_music(game);
     while (game->menu.game_is_up) {
         if (!(launch_game(game)))
             return (0);
     }
+    sfMusic_destroy(game->music);
     return (1);
 }
-
-
-// ? Allocation de la structure et lancement de la création du jeu.
 
 int main(int ac, char **av)
 {
     game_t *game;
 
+    if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h') {
+        usage();
+        return (0);
+    }
     if (!(game = malloc(sizeof(game_t))))
         return (84);
     check_if_cheat(game, av);

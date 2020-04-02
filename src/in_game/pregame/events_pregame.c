@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? check la position de la souris sur la fenetre tuto.
-
 int check_pos_play_pregame(game_t *game)
 {
     game->button.pregame[1].button_rect =
@@ -28,9 +25,6 @@ int check_pos_play_pregame(game_t *game)
     return (1);
 }
 
-
-// ? check la position de la souris sur la fenetre tuto.
-
 int check_pos_tuto_pregame(game_t *game)
 {
     game->button.pregame[0].button_rect =
@@ -46,9 +40,6 @@ int check_pos_tuto_pregame(game_t *game)
         game->button.state_pregame[0] = 0;
     return (1);
 }
-
-
-// ? Check de la position de la souris pour le bouton close.
 
 int check_pos_close_pregame(game_t *game)
 {
@@ -70,9 +61,6 @@ int check_pos_close_pregame(game_t *game)
     return (1);
 }
 
-
-// ? Check la position de la souris dans le pregame.
-
 int check_mouse_position_pregame(game_t *game)
 {
     check_pos_tuto_pregame(game);
@@ -80,9 +68,6 @@ int check_mouse_position_pregame(game_t *game)
     check_pos_close_pregame(game);
     return (1);
 }
-
-
-// ? Events du pregame.
 
 void events_pregame(game_t *game)
 {

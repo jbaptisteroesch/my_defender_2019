@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Cherche le bon png au choix de la tour.
-
 char *choose_ennemy_file(int ennemy_type)
 {
     char *file;
@@ -28,9 +25,6 @@ char *choose_ennemy_file(int ennemy_type)
     return (file);
 }
 
-
-// ? Applique le rect à l'ennemy posé par le player.
-
 sfIntRect choose_ennemy_rect(game_t *game, create_ennemy_t ennemy)
 {
     switch (game->player_data.wave_number) {
@@ -47,9 +41,6 @@ sfIntRect choose_ennemy_rect(game_t *game, create_ennemy_t ennemy)
     return (ennemy.rect);
 }
 
-
-// ? Init les ennemy en fonction des map.
-
 sfVector2f init_ennemy_position(game_t *game, sfVector2f position)
 {
     position.x = 0;
@@ -65,8 +56,6 @@ sfVector2f init_ennemy_position(game_t *game, sfVector2f position)
     }
     return (position);
 }
-
-// ? Fonction générique de création d'ennemy.
 
 create_ennemy_t create_ennemy_generic_function(game_t *game)
 {

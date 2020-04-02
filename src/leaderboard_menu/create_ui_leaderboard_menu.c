@@ -7,8 +7,6 @@
 
 #include "../../include/my.h"
 
-// ? Création table des scores.
-
 int create_ui_leaderboard_menu(game_t *game)
 {
     game->menu.ui_leaderboard_menu = create_element(

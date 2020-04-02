@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? Draw les élements pregame menu.
-
 void draw_pregame(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window, game->window->sprite, NULL);

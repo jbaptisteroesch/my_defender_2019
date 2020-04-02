@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Dessine les ennemy.
-
 void draw_ennemy_wave(game_t *game)
 {
     if (game->head_ennemy == NULL)

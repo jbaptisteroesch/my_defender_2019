@@ -10,9 +10,6 @@
 #ifndef BUTTON_H_
 #define BUTTON_H_
 
-
-// ? enum pour les MAIN_MENU buttons.
-
 enum mm_button {
     MM_PLAY_BUTTON,
     MM_LEADERBOARD_BUTTON,
@@ -28,9 +25,6 @@ enum mm_button {
     MM_QUIT_BUTTON_ONCLICK
 };
 
-
-// ? enum pour les boutons de PAUSE MENU.
-
 enum pm_buttons {
     PM_PLAY_BUTTON,
     PM_MM_BUTTON,
@@ -40,16 +34,10 @@ enum pm_buttons {
     PM_QUIT_BUTTON_HOVER,
 };
 
-
-// ? enum pos X et Y
-
 enum coord {
     X,
     Y
 };
-
-
-// ? struct button contenant.
 
 typedef struct create_button_s
 {
@@ -60,10 +48,6 @@ typedef struct create_button_s
     bool is_hover;
     bool is_click;
 } create_button_t;
-
-
-// ? liste des boutons, le tableau save les coordonnées des boutons
-// ? Les int check l'état des boutons au passage de la souris.
 
 typedef struct button_list_s
 {
@@ -86,7 +70,5 @@ typedef struct button_list_s
     create_button_t *end_menu;
     int *end_menu_state;
 } button_list_t;
-
-
 
 #endif /* !BUTTON_H_ */

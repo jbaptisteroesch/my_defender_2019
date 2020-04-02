@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Fonction générique de création d'éléments.
-
 elem_t create_element(elem_t element, char *element_name,
                                                     float pos_x, float pos_y)
 {

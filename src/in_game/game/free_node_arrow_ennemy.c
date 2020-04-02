@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Free ennemy nodes
-
 void destroy_node_ennemy(add_ennemy_t **head)
 {
     add_ennemy_t *current = *head;
@@ -23,9 +20,6 @@ void destroy_node_ennemy(add_ennemy_t **head)
     *head = NULL;
     return;
 }
-
-// ? Check si il reste des ennemy sur la map. Si ce n'est pas le cas,
-// ? Détruit la linked list.
 
 int is_ennemy_in_game(game_t *game)
 {

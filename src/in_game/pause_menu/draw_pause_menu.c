@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Draw les boutons du menu pause.
-
 void draw_pause_menu_buttons(game_t *game)
 {
     if (game->button.state_pause_menu[PM_PLAY_BUTTON] == 1)
@@ -32,9 +29,6 @@ void draw_pause_menu_buttons(game_t *game)
                     game->button.pause_menu[PM_QUIT_BUTTON].sprite, NULL);
     return;
 }
-
-
-// ? Dessie le menu de pause.
 
 void draw_pause_menu(game_t *game)
 {

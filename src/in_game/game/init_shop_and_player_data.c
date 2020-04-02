@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Init data du joueur.
-
 int init_player_data(game_t *game)
 {
     game->player_data.score = 0;
@@ -19,8 +16,10 @@ int init_player_data(game_t *game)
     else
         game->player_data.money = 70;
     game->player_data.last_hold = 0;
+    game->player_data.has_posed = 0;
     game->player_data.wave_number = 1;
-    game->player_data.next_wave_in = 1;
+    game->player_data.next_wave_in = 10;
+    game->player_data.wave_all_time = 0;
     game->player_data.holding_bt = false;
     game->player_data.holding_yt = false;
     game->player_data.holding_st = false;
@@ -32,9 +31,6 @@ int init_player_data(game_t *game)
         game->player_data.place_is_fill[i] = 0;
     return (1);
 }
-
-
-// ? Init data du shop.
 
 int init_shop_data(game_t *game)
 {

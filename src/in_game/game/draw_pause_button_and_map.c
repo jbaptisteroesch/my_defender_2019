@@ -7,18 +7,12 @@
 
 #include "../include/my.h"
 
-
-// ? Dessine les maps de niveaux.
-
 void draw_map_ig(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window,
                         game->menu.ui_in_game[IG_MAP_LEVEL_ONE].sprite, NULL);
     return;
 }
-
-
-// ? Draw le bouton de pause IG.
 
 void draw_pause_button_ig(game_t *game)
 {

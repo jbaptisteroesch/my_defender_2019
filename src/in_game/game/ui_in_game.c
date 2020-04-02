@@ -7,19 +7,22 @@
 
 #include "../include/my.h"
 
-
-// ? Création des maps de jeu.
-
 int create_map(game_t *game)
 {
     game->menu.ui_in_game[IG_MAP_LEVEL_ONE] =
                     create_element(game->menu.ui_in_game[IG_MAP_LEVEL_ONE],
                     "png/maps/map_one.png", 0, 0);
+    game->menu.ui_in_game[IG_TREE] =
+                    create_element(game->menu.ui_in_game[IG_TREE],
+                    "png/ingame/tree.png", 896, 689);
+    game->menu.ui_in_game[IG_TREE_SEC] =
+                    create_element(game->menu.ui_in_game[IG_TREE_SEC],
+                    "png/ingame/tree.png", 132, -12);
+    game->menu.ui_in_game[IG_BLACK_RECT] =
+                    create_element(game->menu.ui_in_game[IG_BLACK_RECT],
+                    "png/ingame/black.png", 725, 45);
     return (1);
 }
-
-
-// ? Fonction générique création placement des tours.
 
 int create_rectangle_placing(game_t *game, int x, int y, int i)
 {
@@ -38,9 +41,6 @@ int create_rectangle_placing(game_t *game, int x, int y, int i)
     return (1);
 }
 
-
-// ? Crée les emplacements de placement des tours.
-
 int create_towers_place(game_t *game)
 {
     sfVector2f s = game->window->scale;
@@ -55,9 +55,6 @@ int create_towers_place(game_t *game)
     create_rectangle_placing(game, s.x * 1350, s.y * 520, 6);
     return (1);
 }
-
-
-// ? Crée la description des éléments du shop lorsqu'ils sont hover.
 
 int init_shop_tower_desciption(game_t *game)
 {
@@ -83,17 +80,11 @@ int init_shop_tower_desciption(game_t *game)
     return (1);
 }
 
-
-// ? Dessine l'UI de l'état de jeu : IN GAME.
-// ? 3 map, 1 table.
-// ? Clock, Une pour le shop, une pour le texte de la next wave, une pour
-// ? les ennemy qui marche.
-
 int ui_in_game (game_t *game)
 {
     if (!(game->clock.in_game = malloc(sizeof(clocks_t) * 4)))
         return (0);
-    if (!(game->menu.ui_in_game = malloc(sizeof(elem_t) * 6)))
+    if (!(game->menu.ui_in_game = malloc(sizeof(elem_t) * 9)))
         return (0);
     if (!(game->player_data.clock_wave = malloc(sizeof(char) * 3)))
         return (0);

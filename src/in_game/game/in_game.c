@@ -7,12 +7,24 @@
 
 #include "../include/my.h"
 
-
-// ? Init les éléments de jeu.
+int init_sound(game_t *game)
+{
+    game->sbuffer = malloc(sizeof(sfSoundBuffer * ) * 2);
+    game->sounds = malloc(sizeof(sfSound * ) * 2);
+    if (game->sounds == NULL || game->sbuffer == NULL)
+        return (0);
+    game->sbuffer[0] = sfSoundBuffer_createFromFile("png/sounds/arrow.wav");
+    for (int i = 0; i < 2; i++)
+        game->sounds[i] = sfSound_create();
+    game->sbuffer[1] = sfSoundBuffer_createFromFile("png/sounds/thunder.wav");
+    sfSound_setBuffer(game->sounds[0], game->sbuffer[0]);
+    sfSound_setBuffer(game->sounds[1], game->sbuffer[1]);
+    return (1);
+}
 
 int init_in_game_elements(game_t *game)
 {
-    if (!(in_game_button(game)))
+    if (!(in_game_button(game)) || !(init_sound(game)))
         return (0);
     if (!(ui_in_game(game)))
         return (0);
@@ -22,9 +34,6 @@ int init_in_game_elements(game_t *game)
     resize_ui_ig(game);
     return (1);
 }
-
-
-// ? Boucle de l'état de jeu : ACTIF.
 
 int in_game(game_t *game)
 {
@@ -78,4 +87,3 @@ int resize_button(game_t *game)
     }
     return (1);
 }
-//12 BOUTONS A EVOLUER = MDR C'est pas des pokémon hein

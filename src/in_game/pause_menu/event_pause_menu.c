@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Check quel menu lancé lorsque l'on clic sur l'un des boutons du menu pause.
-
 int choose_menu_pause_menu_button(game_t *game, int pos)
 {
     switch (pos) {
@@ -32,9 +29,6 @@ int choose_menu_pause_menu_button(game_t *game, int pos)
     return (1);
 }
 
-
-// ? Check si la souris est sur l'un des boutons.
-
 void check_mouse_position_pause_menu(game_t *game)
 {
     for (int pos = 0; pos < 3; ++pos) {
@@ -55,9 +49,6 @@ void check_mouse_position_pause_menu(game_t *game)
     }
     return;
 }
-
-
-// ? Gère les évènements du menu de pause.
 
 void events_pause_menu(game_t *game)
 {

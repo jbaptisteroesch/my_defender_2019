@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Boucle de l'état de jeu : MENU REGLAGES.
-
 int settings_menu(game_t *game)
 {
     if (!(create_settings_menu_buttons(game)))

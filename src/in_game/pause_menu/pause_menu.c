@@ -20,8 +20,6 @@ int resize_pause_menu(game_t *game)
     return (1);
 }
 
-// ? Détruit les élément du menu de pause.
-
 void destroy_pause_menu(game_t *game)
 {
     for (int i = 0; i < 6; ++i) {
@@ -32,9 +30,6 @@ void destroy_pause_menu(game_t *game)
     sfSprite_destroy(game->menu.ui_pause_menu[BACK].sprite);
     return;
 }
-
-
-// ? Boucle de l'état de jeu : MENU PAUSE.
 
 int pause_menu(game_t *game)
 {

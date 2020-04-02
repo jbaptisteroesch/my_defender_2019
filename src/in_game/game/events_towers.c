@@ -7,8 +7,6 @@
 
 #include "../include/my.h"
 
-// ? Check la possibilité de poser une tour.
-
 int posing_tower(game_t *game, int i)
 {
     if (game->menu.placing_tower[i].is_hover &&
@@ -21,8 +19,6 @@ int posing_tower(game_t *game, int i)
     return (1);
 }
 
-// ? Check les conditions si on veut upgrade une tour.
-
 int check_mouse_upgrade_tower(game_t *game, int i)
 {
     if (game->menu.placing_tower[i].is_hover &&
@@ -31,8 +27,6 @@ int check_mouse_upgrade_tower(game_t *game, int i)
         display_or_not_sprite_upgrade(game, i);
     return (1);
 }
-
-// ? Check les conditions pour poser ou upgrade une tour.
 
 int posing_or_upgrade_tower(game_t *game)
 {

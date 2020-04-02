@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Update du sprite de la tour upgrade.
-
 int switch_rect(add_tower_t *current)
 {
     int rect = 0;
@@ -30,9 +27,6 @@ int switch_rect(add_tower_t *current)
     }
     return (rect);
 }
-
-
-// ? Déplace le sprite après l'upgrade pour qu'il reste sur la position.
 
 int moove_sprite_after_upgrade(add_tower_t *current)
 {

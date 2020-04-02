@@ -8,9 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/score_leaderboard_menu.h"
 
-
-// ? changement d'état à cause d'erreur. Retour au menu principal.
-
 int change_state_cause_of_error(game_t *game)
 {
     int check_tab = 0;
@@ -23,16 +20,10 @@ int change_state_cause_of_error(game_t *game)
     return (0);
 }
 
-
-// ? Fonction d'affichage du manque d'high score (fichier vide ou non présent).
-
 int no_best_highscore(game_t *game)
 {
     return (change_state_cause_of_error(game));
 }
-
-
-// ? Création du menu : TABLEAU DES SCORES.
 
 int leaderboard_menu(game_t *game)
 {

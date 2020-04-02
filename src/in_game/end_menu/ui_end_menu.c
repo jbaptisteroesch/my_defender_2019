@@ -7,18 +7,16 @@
 
 #include "../include/my.h"
 
-
-// ? Crée le texte du menu de fin.
-
 int init_text_end_menu(game_t *game)
 {
     sfVector2f position;
+    char *string = "Enter your name.";
 
     if (!(game->game_text.end_menu = malloc(sizeof(string_t) * 2)))
         return (0);
-    position.x = 875;
+    position.x = 835;
     position.y = 400;
-    create_text_end_menu_pattern(game, "Explication", position, 0);
+    create_text_end_menu_pattern(game, string, position, 0);
     position.x = 775;
     position.y = 505;
     create_text_end_menu_pattern(game, "", position, 1);
@@ -45,9 +43,6 @@ int create_text_end_menu_pattern(game_t *game, char *string,
     sfText_setString(game->game_text.end_menu[pos_tab].string, string);
     return (1);
 }
-
-
-// ? Crée l'UI du menu de fin.
 
 int init_ui_end_menu(game_t *game)
 {

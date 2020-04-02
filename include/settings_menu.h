@@ -8,9 +8,6 @@
 #ifndef SETTINGS_MENU_H_
 #define SETTINGS_MENU_H_
 
-
-// ? Enum répertoire du text du settings menu.
-
 enum sm_text {
     SM_MUSIC,
     SM_RES,
@@ -19,18 +16,12 @@ enum sm_text {
     SM_RES_HD
 };
 
-
-// ? enum settings buttons.
-
 enum sm_button {
     SM_CLOSE,
     SM_CLOSE_HOVER,
     SM_SOUND,
     SM_NO_SOUND
 };
-
-
-// ? enum des states des boutons
 
 enum state_sm_button {
     SM_STATE_CLOSE,

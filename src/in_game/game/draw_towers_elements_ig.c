@@ -7,23 +7,33 @@
 
 #include "../include/my.h"
 
+void draw_false_threed(game_t *game)
+{
+    add_tower_t *current = game->head_tower;
 
-// ? Draw les tours posées.
+    while (current != NULL) {
+        if (current->tower.set_position.x < 500 ||
+                                        current->tower.set_position.y > 700)
+            sfRenderWindow_drawSprite(game->window->window,
+                                                current->tower.sprite, NULL);
+        current = current->next;
+    }
+    return;
+}
 
 void draw_placed_towers(game_t *game)
 {
     add_tower_t *current = game->head_tower;
 
     while (current != NULL) {
-        sfRenderWindow_drawSprite(game->window->window,
-                                current->tower.sprite, NULL);
+        if (current->tower.set_position.x > 530 &&
+                                        current->tower.set_position.y < 700)
+            sfRenderWindow_drawSprite(game->window->window,
+                                                current->tower.sprite, NULL);
         current = current->next;
     }
     return;
 }
-
-
-// ? Draw les projectiles des tours.
 
 void draw_sprite_shot(game_t *game)
 {

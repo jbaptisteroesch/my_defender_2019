@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Détruit les sprites des boutons du menu principal.
-
 int destroy_main_menu_buttons_sprite(game_t *game)
 {
     sfSprite_destroy(game->button.main_menu[MM_PLAY_BUTTON].sprite);
@@ -29,9 +26,6 @@ int destroy_main_menu_buttons_sprite(game_t *game)
     sfSprite_destroy(game->button.main_menu[MM_QUIT_BUTTON_ONCLICK].sprite);
     return (1);
 }
-
-
-// ? Détruit les textures des bouttons du menu principal.
 
 int destroy_main_menu_buttons_texture(game_t *game)
 {
@@ -53,9 +47,6 @@ int destroy_main_menu_buttons_texture(game_t *game)
     sfTexture_destroy(game->button.main_menu[MM_QUIT_BUTTON_ONCLICK].texture);
     return (1);
 }
-
-
-// ? Détruit les éléments du menu principal.
 
 int destroy_main_menu_elements(game_t *game)
 {

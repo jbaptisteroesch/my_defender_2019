@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Fonction générique de création de buttons.
-
 create_button_t create_button(create_button_t button, char *button_name,
                                                     float pos_x, float pos_y)
 {

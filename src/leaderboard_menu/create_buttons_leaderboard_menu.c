@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Création du bouton du menu : tableau des scores.
-
 int create_leaderboard_menu_buttons(game_t *game)
 {
     if (!(game->button.leaderboard = malloc(sizeof(create_button_t) * 2)))

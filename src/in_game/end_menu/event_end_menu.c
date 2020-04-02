@@ -24,7 +24,7 @@ int insert_lign_in_file(game_t *game)
     return (1);
 }
 
-int events_end_menu(game_t *game)
+int events_end_menu(game_t *game, char *name)
 {
     while (sfRenderWindow_pollEvent(game->window->window,
                                                     &(game->window->event))) {
@@ -34,7 +34,7 @@ int events_end_menu(game_t *game)
             game->menu.game_is_up = 0;
         }
         if (game->end_game.press_enter == false)
-            analyse_username(game);
+            analyse_username(game, name);
         else {
             game->menu.game_state[END_MENU] = 0;
             game->menu.game_state[LEADERBOARD_MENU] = 1;

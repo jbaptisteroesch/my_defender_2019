@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Dessine les boutons du menu principal et ces différents états.
-
 void draw_main_menu(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window, game->window->sprite, NULL);

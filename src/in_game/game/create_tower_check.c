@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Cherche le bon png au choix de la tour.
-
 char *choose_tower_file(int tower_type)
 {
     char *file;
@@ -33,9 +30,6 @@ char *choose_tower_file(int tower_type)
     return (file);
 }
 
-
-// ? Applique le rect à la tour posée par le player.
-
 sfIntRect choose_tower_rect_when_placing(game_t *game, create_tower_t tower)
 {
     switch (game->player_data.last_hold) {
@@ -55,9 +49,6 @@ sfIntRect choose_tower_rect_when_placing(game_t *game, create_tower_t tower)
     return (tower.rect);
 }
 
-
-// ? Choisit le type de tour, archer ou magic.
-
 int wich_tower_type(game_t *game)
 {
     int tower_type = 0;
@@ -70,9 +61,6 @@ int wich_tower_type(game_t *game)
         tower_type = 2;
     return (tower_type);
 }
-
-
-// ? Tower type for upgrade.
 
 int tower_type_for_upgrade(game_t *game)
 {
@@ -94,9 +82,6 @@ int tower_type_for_upgrade(game_t *game)
     }
     return (type);
 }
-
-
-// ? crée les damages des tours.
 
 int create_damage_tower(create_tower_t tower)
 {

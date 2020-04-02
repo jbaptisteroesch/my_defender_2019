@@ -8,9 +8,6 @@
 #include "../../include/my.h"
 #include "../../include/settings_menu.h"
 
-
-// ? Check la position de la souris sur le bouton close.
-
 int check_mouse_pos_close_button_settings_menu(game_t *game)
 {
     game->button.settings_menu[SM_CLOSE].button_rect =
@@ -31,20 +28,18 @@ int check_mouse_pos_close_button_settings_menu(game_t *game)
     return (1);
 }
 
-
-// ? Check l'état pour changement de statut quand bouton son press.
-
 int check_state_when_press_sound_button(game_t *game)
 {
-    if (game->button.state_settings_menu[SM_STATE_SOUND] == 0)
+    if (game->button.state_settings_menu[SM_STATE_SOUND] == 0) {
         game->button.state_settings_menu[SM_STATE_SOUND] = 1;
-    else if (game->button.state_settings_menu[SM_STATE_SOUND] == 1)
+        sfMusic_stop(game->music);
+    }
+    else if (game->button.state_settings_menu[SM_STATE_SOUND] == 1) {
         game->button.state_settings_menu[SM_STATE_SOUND] = 0;
+        sfMusic_play(game->music);
+    }
     return (1);
 }
-
-
-// ? Check la position de la souris sur le bouton de son.
 
 int check_mouse_pos_sound_button(game_t *game)
 {

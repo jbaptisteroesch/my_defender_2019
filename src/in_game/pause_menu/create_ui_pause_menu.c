@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Crée le bouton quitter du menu pause.
-
 int create_quit_button_pause_menu(game_t *game)
 {
     sfVector2f s = game->window->scale;
@@ -21,9 +18,6 @@ int create_quit_button_pause_menu(game_t *game)
             "png/mainmenu_buttons/quit_hovering.png", 764.55 * s.x, 700 * s.y);
     return (1);
 }
-
-
-// ? Crée les boutons du menu de pause.
 
 int create_button_pause_menu(game_t *game)
 {
@@ -44,9 +38,6 @@ int create_button_pause_menu(game_t *game)
     return (1);
 }
 
-
-// ? Crée la table du menu pause.
-
 int create_table_pause_menu(game_t *game)
 {
     sfVector2f s = game->window->scale;
@@ -59,9 +50,6 @@ int create_table_pause_menu(game_t *game)
                                                         s.x, 139.5 * s.y);
     return (1);
 }
-
-
-// ? Crée l'UI du menu pause.
 
 int ui_pause_menu(game_t *game)
 {

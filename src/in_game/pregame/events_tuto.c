@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? Check l'action a effectuter.
-
 int do_tuto_action(game_t *game, int i)
 {
     switch (i) {
@@ -26,9 +23,6 @@ int do_tuto_action(game_t *game, int i)
     }
     return (1);
 }
-
-
-// ? Check la position de la souris dans le tuto.
 
 int check_mouse_position_tuto(game_t *game)
 {
@@ -47,9 +41,6 @@ int check_mouse_position_tuto(game_t *game)
     }
     return (1);
 }
-
-
-// ? Events du tuto.
 
 void events_tuto(game_t *game)
 {

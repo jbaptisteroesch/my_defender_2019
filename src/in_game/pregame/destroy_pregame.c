@@ -7,9 +7,6 @@
 
 #include "../../../include/my.h"
 
-
-// ? Destroy les éléments du pregame.
-
 void destroy_pregame(game_t *game)
 {
     sfSprite_destroy(game->menu.ui_pregame[0].sprite);

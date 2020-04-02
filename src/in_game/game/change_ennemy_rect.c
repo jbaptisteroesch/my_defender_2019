@@ -7,8 +7,6 @@
 
 #include "../include/my.h"
 
-// ? Check le nombre d'image pour l'ennemy en cours.
-
 int check_nbr_of_img_for_ennemy(game_t *game)
 {
     int image = 0;
@@ -27,9 +25,6 @@ int check_nbr_of_img_for_ennemy(game_t *game)
     return (image);
 }
 
-
-// ? Selection du rect à changer en fonction de la wave.
-
 int choose_wich_rect_to_change(game_t *game)
 {
     int left = 0;
@@ -47,9 +42,6 @@ int choose_wich_rect_to_change(game_t *game)
     }
     return (left);
 }
-
-
-// ? Change le rect des ennemy lorsqu'ils marchent.
 
 int change_ennemy_rect(game_t *game)
 {

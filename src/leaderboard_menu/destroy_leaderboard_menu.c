@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Détruit les boutons et l'UI du leaderboard menu.
-
 int destroy_buttons_and_ui_leaderboard_menu(game_t *game)
 {
     sfSprite_destroy(game->button.leaderboard[0].sprite);
@@ -21,9 +18,6 @@ int destroy_buttons_and_ui_leaderboard_menu(game_t *game)
     return (1);
 }
 
-
-// ? Détruit le text du leaderboard menu.
-
 int destroy_text_leaderboard_menu(game_t *game)
 {
     for (int i = 0; i < 7; ++i) {
@@ -32,9 +26,6 @@ int destroy_text_leaderboard_menu(game_t *game)
     }
     return (1);
 }
-
-
-// ? Détruit les éléments du menu leaderboard.
 
 int destroy_leaderboard_menu(game_t *game)
 {

@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Init rect des tours. Ordre du rect : L T W H
-
 int init_rect_towers(game_t *game)
 {
     game->entity.towers[BLUE_TOWER].rect = (sfIntRect){0, 0, 202, 228};
@@ -26,8 +23,6 @@ int init_rect_towers(game_t *game)
                                         game->entity.towers[ROCK_TOWER].rect);
     return (1);
 }
-
-// ? Crée les tours, 4 tours différentes.
 
 int create_towers(game_t *game)
 {
@@ -55,7 +50,6 @@ int alloc_path(game_t *game, float *tab)
         game->map_path[i] = tab[i];
     return (1);
 }
-// ? Initie les coordonnées des chemins empruntés par les ennemy.
 
 int init_path(game_t *game)
 {
@@ -80,8 +74,6 @@ int init_path(game_t *game)
     if (alloc_path(game, tab) == 0) return (0);
     return (1);
 }
-
-// ? Crée les tours et les ennemy.
 
 int create_entity(game_t *game)
 {

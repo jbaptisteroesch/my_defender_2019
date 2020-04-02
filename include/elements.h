@@ -10,8 +10,6 @@
 #ifndef ELEMENTS_H_
 #define ELEMENTS_H_
 
-// ? Structure générique création objets.
-
 typedef struct elem_s
 {
     sfTexture *texture;

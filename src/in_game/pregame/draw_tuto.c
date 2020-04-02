@@ -7,8 +7,26 @@
 
 #include "../../../include/my.h"
 
-
-// ? draw les boutons du tuto.
+void draw_tuto_pages_buttons(game_t *game)
+{
+    if (game->tuto.tuto_page == 2) {
+        if (game->button.state_tuto[TUTO_PREV] == 1)
+        sfRenderWindow_drawSprite(game->window->window,
+                            game->button.tuto[TUTO_PREV_HOV].sprite, NULL);
+        else
+        sfRenderWindow_drawSprite(game->window->window,
+                            game->button.tuto[TUTO_PREV].sprite, NULL);
+    }
+    if (game->tuto.tuto_page == 1) {
+        if (game->button.state_tuto[TUTO_NEXT] == 1)
+        sfRenderWindow_drawSprite(game->window->window,
+                            game->button.tuto[TUTO_NEXT_HOV].sprite, NULL);
+        else
+        sfRenderWindow_drawSprite(game->window->window,
+                            game->button.tuto[TUTO_NEXT].sprite, NULL);
+    }
+    return;
+}
 
 void draw_tuto_buttons(game_t *game)
 {
@@ -18,23 +36,9 @@ void draw_tuto_buttons(game_t *game)
     else
         sfRenderWindow_drawSprite(game->window->window,
                             game->button.tuto[TUTO_QUIT].sprite, NULL);
-    if (game->button.state_tuto[TUTO_PREV] == 1)
-        sfRenderWindow_drawSprite(game->window->window,
-                            game->button.tuto[TUTO_PREV_HOV].sprite, NULL);
-    else
-        sfRenderWindow_drawSprite(game->window->window,
-                            game->button.tuto[TUTO_PREV].sprite, NULL);
-    if (game->button.state_tuto[TUTO_NEXT] == 1)
-        sfRenderWindow_drawSprite(game->window->window,
-                            game->button.tuto[TUTO_NEXT_HOV].sprite, NULL);
-    else
-        sfRenderWindow_drawSprite(game->window->window,
-                            game->button.tuto[TUTO_NEXT].sprite, NULL);
+    draw_tuto_pages_buttons(game);
     return;
 }
-
-
-// ? draw le tuto.
 
 void draw_tuto(game_t *game)
 {

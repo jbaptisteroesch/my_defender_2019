@@ -7,9 +7,6 @@
 
 #include "../../include/my.h"
 
-
-// ? Dessine le bouton PLAY en prenant en compte son état
-
 void draw_play_button_main_menu(game_t *game)
 {
 
@@ -23,9 +20,6 @@ void draw_play_button_main_menu(game_t *game)
         sfRenderWindow_drawSprite(game->window->window,
                         game->button.main_menu[MM_PLAY_BUTTON].sprite, NULL);
 }
-
-
-// ? Dessine le bouton LEADERBOARD en prenant en compte son état
 
 void draw_leaderboard_button_main_menu(game_t *game)
 {
@@ -43,9 +37,6 @@ void draw_leaderboard_button_main_menu(game_t *game)
             game->button.main_menu[MM_LEADERBOARD_BUTTON].sprite, NULL);
 }
 
-
-// ? Dessine le bouton SETTINGS en prenant en compte son état
-
 void draw_settings_button_main_menu(game_t *game)
 {
 
@@ -59,9 +50,6 @@ void draw_settings_button_main_menu(game_t *game)
     sfRenderWindow_drawSprite(game->window->window,
             game->button.main_menu[MM_SETTINGS_BUTTON].sprite, NULL);
 }
-
-
-// ? Dessine le bouton QUIT en prenant en compte son état
 
 void draw_quit_button_main_menu(game_t *game)
 {

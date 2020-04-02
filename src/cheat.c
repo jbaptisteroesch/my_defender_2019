@@ -11,5 +11,7 @@ int check_if_cheat(game_t *game, char **av)
 {
     if (av [1] && av[1][1] == 'm')
         game->code.money = 1;
+    else
+        game->code.money = 0;
     return (1);
 }

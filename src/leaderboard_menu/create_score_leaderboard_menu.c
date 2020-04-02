@@ -8,16 +8,13 @@
 #include "../../include/my.h"
 #include "../../include/score_leaderboard_menu.h"
 
-
-// ? Analyse du fichier highscore et set des strings d'highscore.
-
 int read_buffer(game_t *game, char *buffer)
 {
     int score_index = 0;
     int in_str_index = 0;
     char *temp_str = NULL;
 
-    if (!(temp_str = malloc(sizeof(char) * 15)))
+    if (!(temp_str = malloc(sizeof(char) * 30)))
         return (no_best_highscore(game));
     for (int buff_index = 0; buffer[buff_index] != '\0'; ++buff_index) {
         if (buffer[buff_index] == '\n') {
@@ -31,11 +28,9 @@ int read_buffer(game_t *game, char *buffer)
         temp_str[in_str_index] = buffer[buff_index];
         ++in_str_index;
     }
+    free(temp_str);
     return (1);
 }
-
-
-// ? Création des strings du tableau des scores.
 
 int create_highscore_string(game_t *game)
 {
@@ -58,9 +53,6 @@ int create_highscore_string(game_t *game)
     close (fd);
     return (1);
 }
-
-
-// ? Création du tableau des scores.
 
 int create_score(game_t *game)
 {
@@ -85,9 +77,6 @@ int create_score(game_t *game)
     return (1);
 }
 
-
-// ? Set position des strings du leaderboard.
-
 int set_string_position(game_t *game)
 {
     sfText_setPosition(game->game_text.score[HS_ONE].string,
@@ -104,9 +93,6 @@ int set_string_position(game_t *game)
                                 game->game_text.score[HS_SIX].place_string);
     return (1);
 }
-
-
-// ? Place les strings dans le leaderboard menu.
 
 int place_highscore_leaderboard_menu(game_t *game)
 {

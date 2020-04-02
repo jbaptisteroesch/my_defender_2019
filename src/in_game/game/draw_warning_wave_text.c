@@ -7,9 +7,6 @@
 
 #include "../include/my.h"
 
-
-// ? Fait cignoter le texte de warning wave.
-
 void blinking_wave_warning(game_t *game)
 {
     if (game->clock.in_game[CLOCK_NEXT_WAVE].seconds > 0.6 &&
@@ -22,11 +19,10 @@ void blinking_wave_warning(game_t *game)
     return;
 }
 
-
-// ? Dessine le text de warning wave.
-
 void draw_warning_wave(game_t *game)
 {
+    sfRenderWindow_drawSprite(game->window->window,
+                        game->menu.ui_in_game[IG_BLACK_RECT].sprite, NULL);
     game->clock.in_game[CLOCK_NEXT_WAVE].time =
             sfClock_getElapsedTime(game->clock.in_game[CLOCK_NEXT_WAVE].clock);
     game->clock.in_game[CLOCK_NEXT_WAVE].seconds =
