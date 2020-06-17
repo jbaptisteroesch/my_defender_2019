@@ -10,7 +10,7 @@
 #ifndef MY_DEFENDER_H_
 #define MY_DEFENDER_H_
 
-int (*select_game_state[8])(game_t *game);
+extern int (*select_game_state[8])(game_t *game);
 window_t *create_window(window_t *window, char *title);
 void events(game_t *game);
 int disp_window(game_t *game);
