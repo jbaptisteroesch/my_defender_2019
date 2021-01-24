@@ -5,4 +5,4 @@ Commandes :
 
 MY_DEFENDER est un projet EPITECH. Le but est de recréer un jeu de type "tower defense" en utilisant la CSFML.
 
-Ce projet a été réaliser par GOLLING Florian et ROESCH Jean-Baptiste au cours de l'année 2019/2020.
+Ce projet a été réalisé par GOLLING Florian et ROESCH Jean-Baptiste au cours de l'année 2019/2020.
